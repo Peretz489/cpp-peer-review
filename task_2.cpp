@@ -55,7 +55,7 @@ public:
         forbidden_list_.resize(unique_items);
     }
 
-    bool IsForbidden(const Domain &domain)
+    bool IsForbidden(const Domain &domain) const
     {
         auto position = std::upper_bound(forbidden_list_.begin(), forbidden_list_.end(), domain,
                                          [](const Domain &lhs, const Domain &rhs)
