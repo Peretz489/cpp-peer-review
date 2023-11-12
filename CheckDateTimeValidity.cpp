@@ -6,7 +6,7 @@ enum class DateTimeStatus{
 
 DateTimeStatus CheckDateTimeValidity(const DateTime& dt) {
 
-    constexpr bool is_leap_year = (dt.year % 4 == 0) && !(dt.year % 100 == 0 && dt.year % 400 != 0);
+    const bool is_leap_year = (dt.year % 4 == 0) && !(dt.year % 100 == 0 && dt.year % 400 != 0);
     static const array month_lengths = {31, 28 + is_leap_year, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     const uint max_year = 9999;
 
